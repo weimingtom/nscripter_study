@@ -1,0 +1,61 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>btnwait</h2>
+<h3>btnwait &lt;numerical variable&gt;</h3>
+<p>
+This serves as a listener for a button.  The result value of the button is returned in the numerical variable.<BR><BR>
+Return Values:<BR>
+0: no button was clicked<BR>
+-1: A right-click occured<BR>
+>=1: Number of clicked button<BR>
+<BR>
+If btnwait returns a value of &lt;0 (no button clicked), then you can invoke btnwait again to enter the identical button wait state.  But if btnwait returns a value of >=1 (some button pressed), then the images will remain behind, but all button definitions will be cleared (to save memory).  Please consult the btndemo/ folder in the SDK for examples.
+</p>
+
+
+<h2>btnwait</h2>
+<h3>btnwait &lt;数字変数&gt;</h3>
+<p>
+実際にボタン処理します。数字変数に結果が戻ります。<br>
+<br>
+戻り値：<br>
+０…どのボタンでもないところをクリックした<br>
+－１…右クリックした<br>
+その他…ボタン番号<br>
+<br>
+戻り値が０以下（ボタンを押していない）ときは、すぐにもういちどbtnwaitを呼べば、また同じボタンモードに。<br>
+戻り値が１以上（実際にボタンを押した）ときは、押された瞬間の画像のままで、ボタン定義は全てクリアされます。（メモリ節約のため）
+くわしくは、フォルダbtndemoにある説明.txtを参照下さい。<br>
+<br>
+</p>
+
+<h2>btnwait</h2>
+<h3>btnwait &lt;数字变量&gt;</h3>
+<p>
+实际上处理按钮。在数字变量中返回结果。<br>
+<br>
+返回值：<br>
+0…没有按下任何按钮<br>
+-1…右键点击<br>
+其他…按钮序号<br>
+<br>
+返回值在0以下（没有按下按钮）&#26102;，可以立刻再次调用btnwait，再次进入相同的按钮模式。<br>
+返回值在1以上（事&#23454;上按下按&#38062;）&#26102;，按下的瞬间图片将保持不变，但按钮定义会被完全清除。（为了节省内存）<br>
+详细请参照文件夹btndemo下的说明.txt。<br>
+<br>
+</p>
+
+</body>
+</html>

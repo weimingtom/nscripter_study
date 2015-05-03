@@ -1,0 +1,167 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>effect</h2>
+<h3>effect &lt;number&gt;,&lt;number&gt;(,&lt;number&gt;(,&lt;character string&gt;))</h3>
+<p>
+Assigns an Effect Number to a pack-in effect.<br>
+Once you have an Effect Number assigned, you can use it in image display commands<br>
+From left to right, the variables are: effect number, pack-in effect index, effect runtime (in milliseconds), pattern image filename.<br>
+However, if you are using a pack-in effect, you may omit the last two variables.<br>
+<br>
+As an effect slotted in Effect Number 0  will display immediately with the next image display command, please start your effects at 1.<br>
+Or, if you are going to use 0, please remember to call an image display command as soon as you can.<br>
+<br>
+By default, pack-in effect index 1 is not an effect at all, but sets the effect runtime to 0 -- an instantaneous display.<br>
+<br>
+&lt;pack-in effect index&gt;<br>
+<ol>
+	<li>Instantaneous display.  No runtime variable needed.</li>
+	<li>Left-sided shutter</li>
+	<li>Right-sided shutter</li>
+	<li>Upwards shutter</li>
+	<li>Downwards shutter</li>
+	<li>Left-sided curtain</li>
+	<li>Right-sided curtain</li>
+	<li>Upwards curtain</li>
+	<li>Downwards curtain</li>
+	<li>Pixelwise crossfade</li>
+	<li>Left-sided scroll</li>
+	<li>Right-sided scroll</li>
+	<li>Upwards scroll</li>
+	<li>Downwards scroll</li>
+	<li>Fade via mask pattern.  You must set a filename with this, pointing to a mask bmp (of either 256 colors or full color).  In this mask bmp, the white areas fade slowly, and the black areas fade quickly.</li>
+	<li>Mosaic out.  After this effect is called, the state of the screen will be as uncertain as if you used Effect Number 0, so please call a display command, like print, immediately afterwards.</li>
+	<li>Mosaic in</li>
+	<li>Crossfade via mask.  This works similarly to 15, except it is far more processor intensive, so do use this effect with care.</li>
+</ol>
+
+　　　EX）<br>
+　　　　effect 1,1<br>
+　　　　effect 2,4,1000<br>
+　　　　effect 3,15,2000,"m3.bmp"<br>
+</p>
+
+
+<h2>effect</h2>
+<h3>effect &lt;数字&gt;,&lt;数字&gt;(,&lt;数字&gt;(,&lt;文字列&gt;))</h3>
+<p>
+エフェクト番号に、効果を割り当てます。<br>
+画像表示命令には、ここで指定したエフェクト番号を使ってください。<br>
+左から順に、エフェクト番号、効果番号、掛ける時間（単位ミリ秒）、
+パターン画像名です。<br>
+ただし、効果番号によっては、後ろの二つは省略されることもあります。<br>
+<br>
+エフェクト番号０番は、「表示せずに、次の画像命令でいっしょに表示する」
+という意味で予約されているので、１番以降を使ってください。<br>
+なお、エフェクト番号０を使った場合は、なるべく早くほかの画像表示命令で
+画像を表示してください。<br>
+<br>
+デフォルト指定で、１が瞬時表示にしてあります。<br>
+<br>
+＜効果番号一覧表＞<br>
+　１　瞬時表示。時間指定はいりません。<br>
+　２　左シャッター<br>
+　３　右シャッター<br>
+　４　上シャッター<br>
+　５　下シャッター<br>
+　６　左カーテン<br>
+　７　右カーテン<br>
+　８　上カーテン<br>
+　９　下カーテン<br>
+１０　ピクセル単位のクロスフェード<br>
+１１　左からスクロール<br>
+１２　右からスクロール<br>
+１３　上からスクロール<br>
+１４　下からスクロール<br>
+１５　マスクパターンによるフェード。<br>
+　　　第三パラメータに文字列でマスク画像名を指定します。<br>
+　　　マスク画像の形式は256色でもフルカラーでもかまいません。<br>
+　　　サンプルで置いてあるm1.bmp,m2.bmpでためしていただければわかると<br>
+　　　思いますが、マスク上で白いところほど遅く、黒いところほど速く<br>
+　　　表示されます。<br>
+　　　マスク画像が小さいときは、壁紙のように四方に並べて640x480ドットに<br>
+　　　敷き詰められます。<br>
+１６　モザイクアウト。この命令のあとは、指定された画面をエフェクト番号０<br>
+　　　でロードしたときと同じで、不定状態です。必ず、直後にほかの命令…<br>
+　　　たとえばprintなどを使って、画像を表示しなおしてください。<br>
+１７　モザイクイン。<br>
+１８　マスクパターンによるクロスフェード<br>
+　　　１５番では、単に、マスクの濃度による時間差でピクセルがコピーされる<br>
+　　　だけでしたが、こっちは、時間差クロスフェードします。<br>
+　　　各社ではやっている演出効果ですが、マシンへの負担が、全エフェクトで<br>
+　　　一番大きいので、遅いマシンでは、少し荒くなるかもしれません。<br>
+<br>
+　　　例）<br>
+　　　　effect 1,1<br>
+　　　　effect 2,4,1000<br>
+　　　　effect 3,15,2000,"m3.bmp"<br>
+<br>
+</p>
+
+<h2>effect</h2>
+<h3>effect &lt;数字（效果编号）&gt;,&lt;数字（效果类型编号）&gt;(,&lt;数字（使用的毫秒时间）&gt;(,&lt;字符串（缓冲图片名）&gt;))</h3>
+<p>
+效果编号分别代表一种效果<br>
+对于显示图像命令，请使用这里指定的效果编号。<br>
+从左到右依次是，效果编号，效果类型编号，消耗时间（单位毫秒）、缓冲图片名。<br>
+但是，根据使用效果类型编号，后面两个参数可以忽略。<br>
+<br>
+当效果编号为0时，意思是“不显示，到下一个图像命令时才一起显示”，
+请使用1以后的编号显示，<br>
+此外，使用效果编号0的情况下，请尽快执行图片显示命令。<br>
+<br>
+默认，1为瞬间显示。<br>
+<br>
+＜效果类型编号一览表＞<br>
+　1　瞬间显示。不需要指定事件。<br>
+　2　左快门<br>
+　3　右快门<br>
+　4　上快门<br>
+　5　下快门<br>
+　6　左窗帘<br>
+　7　右窗帘<br>
+　8　上窗帘<br>
+　9　下窗帘<br>
+　10　像素单位的交叉淡入淡出<br>
+　11　从左开始的滚动<br>
+　12　从右开始的滚动<br>
+　13　从上开始的滚动<br>
+　14　从下开始的滚动<br>
+　15　使用遮罩模式的效果。<br>
+　　　第三参数的字符串指定遮罩图片名。<br>
+　　　遮罩图片的格式为256色而非全彩。<br>
+　　　可以尝试示例中的m1.bmp和m2.bmp。<br>
+　　　可以认为，遮罩上白色部分显示较迟，黑色部分消失较快。<br>
+　　　在遮罩图片较小时，就像壁纸那样向四方平铺成600x480像素。<br>
+　16　马赛克淡出。使用这个命令后，同时间加载被指定画面的效果编号为0，会进入不确定状态<br>
+　　　一定要立即执行后面的其它命令…<br>
+　　　例如使用诸如print的命令，请重新显示图片。<br>
+　17　马赛克淡入。<br>
+　18　使用遮罩图片的交叉淡入淡出<br>
+　　　使用编号15时，仅仅根据遮罩的深度指定的时间差复制像素<br>
+　　　但是，这里指定的是交叉淡入淡出的时间差。<br>
+　　　在各公司测试的播放效果，机器的负担会在执行完全效果时达到最大，<br>
+　　　在较慢的机器上，可能会有点粗糙。<br>
+<br>
+　　　示例）<br>
+　　　　effect 1,1<br>
+　　　　effect 2,4,1000<br>
+　　　　effect 3,15,2000,"m3.bmp"<br>
+<br>
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>ofscpy</h2>
+
+<p>
+Copies things drawn using a blt command to the offscreen buffer.<br>
+Explanation:<br>
+　Once you have blitted an image onto the screen, and now you want to call an effect on it, you would use this command to copy it to the offscreen buffer.<br>
+　The offscreen buffer created with this command may be used in effects, just like any other screen buffer.<br>
+　The image and the effect will display, but they will not be remembered via load/save.<br>
+<br>
+By using blt and ofscpy together, you can create engine cutscenes and such (like those found in AIR), and indeed this is why these commands were created.  They may thus be hard to use, but please bear with us.<br>
+<br>
+Usage:<br>
+<br>
+btndef "～"<br>
+;read animation images<br>
+<br>
+bg ～<br>
+ld c,～<br>
+;all commands up until this point have been standard image commands, so they will show fine.<br>
+<br>
+resettimer<br>
+blt ～<br>
+waittimer 100<br>
+blt ～<br>
+waittimer 100<br>
+;in this fashion can we display images one after the other in an engine cutscene.<br>
+<br>
+;now that we've blitted a bunch of stuff, and we want to process the images with effects and such, we'd need to copy the final product to the offscreen buffer.<br>
+ofscpy<br>
+bg ～<br>
+<br>
+;and now you can do anything you want to either the onscreen or the offscreen buffer.<br>
+bg ～<br>
+ld c,～<br>
+</p>
+
+
+<h2>ofscpy</h2>
+
+<p>
+复制使用blt命令绘画的东西到离屏缓冲。<br>
+解释：<br>
+一旦你已经绘画一张图到屏幕，而现在你已经在它上面调用一个特效，你将使用这个命令复制它
+到离屏缓冲。<br>
+使用这个命令创建的离屏缓冲可以用于特效，正如其他任意屏幕缓冲。<br>
+图片和特效将显示，但它们将不会通过load和save被记住。<br>
+<br>
+通过一起使用blt和ofscpy命令，
+你可以创建引擎剧情画面和类似（像AIR中找到的那些），
+而这正是这些命令被创建的原因。
+它们可能如此难于使用，但请容忍我们。<br>
+<br>
+用法:<br>
+<br>
+btndef "～"<br>
+;读取动画图片<br>
+<br>
+bg ～<br>
+ld c,～<br>
+;所有直至这个点的命令已经是标准的图片命令，所以它们将显示良好。<br>
+<br>
+resettimer<br>
+blt ～<br>
+waittimer 100<br>
+blt ～<br>
+waittimer 100<br>
+;以这种方式我们可以在引擎剧情场景中一个接一个地显示图片。<br>
+<br>
+;既然我们已经复制一串制作人员信息，而我们想用特效和之类的东西处理这些图片，我们需要复制最终产物到离屏缓冲。<br>
+ofscpy<br>
+bg ～<br>
+<br>
+;而现在你可以做你想对屏幕缓冲或离屏缓冲做的任意事情。<br>
+bg ～<br>
+ld c,～<br>
+</p>
+
+</body>
+</html>

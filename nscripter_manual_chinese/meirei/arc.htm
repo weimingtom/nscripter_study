@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>arc</h2>
+<h3>arc &lt;character string&gt;</h3>
+<p>
+Designate archive decompression plugin.<br>
+The character string's form is "&lt;archive name&gt;|&lt;plugin dll name&gt;".<br>
+Although it will dearchive sounds, music, and images, it will not run scripts.<br>
+<br>
+　　　EX）arc "arc.sar|scrunarc.dll"<br>
+<br>
+By combining this with registry read commands, you can do many things.  For instance, you could very easily read the registry, find out that the machine had "To Heart" installed, and  designate the proper archive to decompress accordingly.<br>
+<br>
+　　　(sample source)<br>
+	getreg $0,"software\leaf\toheart","datadir"<br>
+	add $0,"\lvns3dat.pak|axlfpak.spi"<br>
+	arc $0<br>
+</p>
+
+
+<h2>arc</h2>
+<h3>arc &lt;文字列&gt;</h3>
+<p>
+アーカイブ展開プラグインを指定します。<br>
+書式は、"アーカイブファイル名|関連付けＤＬＬ名"です。<br>
+画像、音声はアーカイブ対応していますが、スクリプトはしていません。<br>
+<br>
+レジストリを読みに行く命令と組み合わせることで、いろいろな指定ができるようになります。一例として、To Heartのインストールされたマシンの、レジストリ情報を読み取って、アーカイブ指定する方法を紹介します。<br>
+<br>
+　　　（サンプルソース）<br>
+	getreg $0,"software\leaf\toheart","datadir"<br>
+	add $0,"\lvns3dat.pak|axlfpak.spi"<br>
+	arc $0<br>
+<br>
+なお、nsaアーカイブについてはこの命令は必要ありません。 <br>
+</p>
+
+<h2>arc</h2>
+<h3>arc &lt;字符串&gt;</h3>
+<p>
+指定档案文件的解压插件。<br>
+格式是"&lt;档案文件名&gt;|&lt;插件dll文件名&gt;".<br>
+虽然可以处理声音、图像文件，但不能用来执行脚本文件<br>
+<br>
+　　　例）arc "arc.sar|scrunarc.dll"<br>
+<br>
+结合读取注册表的指令, 你可以做很多事情。例如，你可以非常容易地读取注册表, 判断机器是否已经安装了"To Heart"，并指定相应的归档文件来解压缩。<br>
+<br>
+　　　(示例程序)<br>
+	getreg $0,"software\leaf\toheart","datadir"<br>
+	add $0,"\lvns3dat.pak|axlfpak.spi"<br>
+	arc $0<br>
+<br>
+	[注释]<br>
+	获取toheart的数据文件所在路径<br>
+	指定axlfpak.spi来解压lvns3dat.pak<br>
+<br>
+另外，对于nsa档案文件没必要用此命令
+</p>
+
+</body>
+</html>

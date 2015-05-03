@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>msp</h2>
+<h3>msp &lt;sprite number&gt;,&lt;number&gt;,&lt;number&gt;,&lt;number&gt;</h3>
+<p>
+Moves the sprite of the designated number.  The other variables, from left to right, are: x, y, transparency.<br>
+<br>
+Like the tal command, and other sprite system commands, msp's results will not show up on screen (this is for ease and speed of batch processing).<br>
+So before you call any text or image display commands after an msp, please call a print command to update the screen before continuing.<br>
+</p>
+
+<h2>msp</h2>
+<h3>msp &lt;スプライト番号&gt;,&lt;数字&gt;,&lt;数字&gt;,&lt;数字&gt;</h3>
+<p>
+そのスプライトを移動させます。順に、Ｘ，Ｙ，透過度に加算する値、です。<br>
+<br>
+なお、tal命令と、スプライト系命令は、すべて、画像を内部的に書きかえるだけで、
+画面に反映させません。（一括処理で高速化するためです。）<br>
+他の画像命令を使ったり、文字を表示する前に、必ずprint命令で実際に
+表示してください。<br>
+</p>
+
+<h2>msp</h2>
+<h3>msp &lt;精灵序号&gt;,&lt;数字&gt;,&lt;数字&gt;,&lt;数字&gt;</h3>
+<p>
+移动那个精灵。依次是X，Y，透明度的增加值。<br>
+<br>
+更加地，和tal命令一样，都是精灵系命令，所有，只是在内部绘画画面，
+不会反映到画面中。（通过批量处理来优化速度。）<br>
+使用其他图片命令，在显示文字之前，请务必使用print命令实际地显示。<br>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+﻿charset:
+18:50 2011/9/19 : over
+16:09 2011/9/19 : return.htm
+13:26 2011/9/19 : mul.htm
+8:08 2011/9/19 : meirei.htm
+0:22 2011/9/19 : dec.htm
+----------
+all:
+21:22 2012/1/26 : http://hiyu.blog.shinobi.jp/Category/2/8/ dim
+21:00 2011/9/29 : http://hiyu.blog.shinobi.jp/Category/2/8/ numalias
+10:21 2011/9/20 : http://hiyu.blog.shinobi.jp/Category/2/11/
+0:06 2011/9/19 : break.htm
+
+----------
+file:///D:/nscripter_manual/meirei/avi.htm
+http://hiyu.blog.shinobi.jp/
+
+https://github.com/skkap/onscripter-helper
+http://unclemion.com/onscripter/api/NScrAPI.html
+http://senzogawa.s90.xrea.com/reference/NScrAPI.html
+
+http://unclemion.com/onscripter/api/NScrAPI.xml
+http://nscripter.insani.org/reference/
+
+http://tieba.baidu.com/p/1573157028
+
+
+todo:meirei.htm
+
+09:55 2015-01-11 : barclear
+10:11 2015-01-11 : break
+10:29 2015-01-11 : cell
+10:14 2015-02-19 : cmp
+10:17 2015-02-19 : csp
+10:20 2015-02-19 : date
+10:21 2015-02-19 : dec
+10:30 2015-02-19 : defaultspeed define definereset defmp3vol defsevol defvoicevol
+10:41 2015-02-19 : delay dim
+10:03 2015-02-23 : dev dwave dwaveload dwaveloop dwaveplay dwaveplayloop dwavestop
+10:34 2015-02-23 : end erasetextwindow exbtn exbtn_d exbtn_d
+08:21 2015-02-24 : fchk filelog for game getbtntimer getini getreg gettimer
+09:18 2015-02-24 : getversion globalon gosub goto
+22:17 2015-03-14 : if inc input 
+04:51 2015-03-15 : inputstr insertmenu itoa jumpb jumpf kidokuskip killmenu
+05:16 2015-03-15 : labellog lchk ld loadgame
+16:01 2015-03-22 : locate lookbackbutton lookbackcolor lookbackflush lookbackvoice
+16:11 2015-03-22 : lr_trap lr_trap2 lsp lsph menu_click_def menu_click_page
+07:37 2015-03-28 : menu_full menu_window menuselectcolor menuselectvoice menusetwindow
+08:14 2015-03-28 : mesbox mod mode800
+15:51 2015-03-28 : mode_saya mode_wave_demo monocro
+16:56 2015-03-28 : mousecursor mov mov3 movl
+13:39 2015-04-06 : movn mp3 mp3loop mp3save mpegplay msp mul
+07:53 2015-04-12 : nega notif nsa nsadir numalias ofscpy
+09:03 2015-04-19 : play playonce playstop print prnum prnumclear puttext
+09:38 2015-04-19 : quake quakex quakey
+16:26 2015-04-26 : repaint reset resetmenu resettimer return rlookback
+16:54 2015-04-26 : rmenu rmode rnd rnd2 roff
+10:07 2015-05-02 : savefileexist savegame savenumber saveoff
+13:48 2015-05-02 : saveon savetime select selgosub selnum selnum setcursor
+13:48 2015-05-02 : setwindow setwindow2 skip
+17:26 2015-05-02 : skipoff soundpressplgin spbtn spi spstr spwait start
+17:45 2015-05-02 : stop sub syosiki01 syosiki02 syosiki03 syosiki04 syosiki05 syosiki06 syosiki07 systemcall
+19:25 2015-05-02 : versionstr vsp wait waittimer wave waveloop wavestop windowback windoweffect
+20:50 2015-05-02 : tal textclear textoff texton textspeed time btntime trap
+21:10 2015-05-02 : tokusyu01 - tokusyu11
+
+

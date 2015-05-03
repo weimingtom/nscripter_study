@@ -1,0 +1,58 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>btnwait2</h2>
+<h3>btnwait2 &lt;numerical variable&gt;</h3>
+<p>
+This serves as a listener for a button.  The result value of the button is returned in the numerical variable.<BR><BR>
+Return Values:<BR>
+0: no button was clicked<BR>
+-1: A right-click occured<BR>
+>=1: Number of clicked button<BR>
+<BR>
+Unlike btnwait, this command does not clear any button definitions.  Therefore, it will keep reading the button graphic files.  Now, since the buttons remain in memory even after there is no use for them, you should call a btndef "" after you're finished using them in order to free up the memory.
+</p>
+
+<h2>btnwait2</h2>
+<h3>btnwait2 &lt;数字変数&gt;</h3>
+<p>
+実際にボタン処理します。数字変数に結果が戻ります。<br>
+<br>
+戻り値：<br>
+０…どのボタンでもないところをクリックした<br>
+－１…右クリックした<br>
+その他…ボタン番号<br>
+<br>
+btnwait命令と違って、ボタン定義はクリアされません。だから、ボタン画像ファイルは読まれっぱなしです。<br>
+ボタン処理が終わって、ボタンが要らなくなったら、他の処理がメモリを使えるように、btndef ""でボタン定義をクリアして、ボタン画像を解放しておくことをお勧めします。<br>
+</p>
+
+<h2>btnwait2</h2>
+<h3>btnwait2 &lt;数字&#21464;量&gt;</h3>
+<p>
+实际上处理按钮。在数字变量中返回结果。<br>
+<br>
+返回值：<br>
+0…没有按下任何按钮<br>
+-1…右键点击<br>
+其他…按钮序号<br>
+<br>
+与btnwait命令不同，不会清除按钮定义。所以，按钮图片文件仍旧是加载的。<br>
+按钮处理完毕，按钮如果不需要的话，为了使用内存做其他处理，请最好用btndef ""清除按钮定义，释放按钮图片。<br>
+</p>
+
+
+
+</body>
+</html>

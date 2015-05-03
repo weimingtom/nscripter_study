@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+
+<h2>exbtn</h2>
+<h3>exbtn &lt;control string&gt;</h3>
+<p>
+This is exactly the same as spbtn, with the addition of a trailing control string.<br>
+In short, when the player mouseovers a button controlled by exbtn, the button isn't just shifted, but control over screen graphics is exerted via sprite control as per the control string.<br>
+<br>
+The control string is formuated as follows:<br>
+"C&lt;number&gt;" causes the sprite with that number to be hidden.<br>
+"P&lt;number&gt;" causes the sprite with that number to be displayed.<br>
+"P&lt;number1&gt;,&lt;number2&gt;" causes sprite number1 to be displayed in cell number2.<br>
+<br>
+You can concatenate any number of the three options in your control string.<br>
+EX）<br>
+"C10"<br>
+"C11P10"<br>
+"C11P10,2P9"<br>
+<br>
+When using composite buttons, there needs to be an assignment for what occurs when the mouse cursor isn't touching any part of the button.  This needs to be set in exbtn_d.<br>
+<br>
+Buttons, like any other graphic, can be loaded as image filename character strings or as sprites.
+</p>
+
+
+<h2>exbtn</h2>
+<h3>exbtn &lt;控制字符串&gt;</h3>
+<p>
+这个命令与spbtn完全相同，不同的是新增了一个后缀控制字符串。<br>
+简单来说，当玩家的鼠标在一个exbtn控制的按钮上鼠标上方移动，那个按钮不仅仅变形，
+而且根据控制字符串，使得屏幕图像的控制通过精灵控件受到影响<br>
+<br>
+控制字符串被规定为：<br>
+"C&lt;数字&gt;" 导致带有该编号的精灵被隐藏。<br>
+"P&lt;数字&gt;" 导致带有该编号的精灵被显示。<br>
+"P&lt;数字1&gt;,&lt;数字2&gt;" 导致精灵编号1显示在位置编号2里。<br>
+<br>
+你可以在你的控制字符串中拼接任意数量的三个选项。<br>
+例子）<br>
+"C10"<br>
+"C11P10"<br>
+"C11P10,2P9"<br>
+<br>
+When using composite buttons, there needs to be an assignment 
+for what occurs when the mouse cursor isn't touching any part of the button.  
+This needs to be set in exbtn_d.<br>
+当使用组合按钮时，需要作为一个工作，当鼠标光标不是在触碰按钮的任意部分时发生的事情。
+这需要用exbtn_d设置。
+<br>
+按钮，像其他图像那样，可以作为图片文件名字符串或作为精灵来加载。
+</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<title></title>
+<link rel="stylesheet" href="default.css" type="text/css">
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#9933FF"
+vlink="#FF66FF" alink="#CC99FF" topmargin="20" leftmargin="20"
+class="page" marginheight="0" marginwidth="0">
+
+<h2>savetime</h2>
+<h3>savetime &lt;save number&gt;,%month,%day,%hours,%minutes</h3>
+<p><br>
+Gets the month, day, hour of the day, and minutes of the hour in which a particular save was recorded.<br>
+If the save file does not exist, then the %month parameter is set to 0.<br>
+<br>
+EX）<br>
+savetime 3,%0,%1,%2,%3<br>
+if %0=0 goto *non<br>
+`Save 3 was recorded on %0 / %1, %2 : %3.@<br>
+end<br>
+*non<br>
+`Save 3 nonexistent.@<br>
+end<br>
+</p>
+
+
+<h2>savetime</h2>
+<h3>savetime &lt;存档编号&gt;,%月,%日,%时,%分</h3>
+<p><br>
+获取月，日，一天内的小时，和一小时的分钟，特定于要保存的存档。<br>
+如果存档文件不存在，那么%month参数被设置为0。<br>
+<br>
+例）<br>
+savetime 3,%0,%1,%2,%3<br>
+if %0=0 goto *non<br>
+`存档3被记录在%0 / %1, %2 : %3.@<br>
+end<br>
+*non<br>
+`存档3不存在。@<br>
+end<br>
+</p>
+
+
+</body>
+</html>
